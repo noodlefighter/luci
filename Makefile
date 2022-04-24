@@ -11,7 +11,7 @@ export OS
 
 all: build
 
-build: gccbuild luabuild
+build: gccbuild luabuild hostcopy
 
 gccbuild:
 	make -C modules/base CC="cc" CFLAGS="" LDFLAGS="" SDK="$(shell test -f .running-sdk && echo 1)" host-install
